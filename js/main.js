@@ -25,4 +25,6 @@ $(document).ready(function() {
         }
         $(this).addClass("active");
     });
+
+    // $(".swiper-container-horizontal>.swiper-pagination-bullets").css({"width": "auto", "margin-left", 0-$(this).width()});
 });

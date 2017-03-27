@@ -175,14 +175,46 @@ body {
 }
 
 #slider-main .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
+    background: transparent;
+    width: 1.25vw;
+    height: 1.25vw;
+    margin: 0 .375vw;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#slider-main .swiper-pagination-bullet:before {
+    content: '';
     background: #ea2839;
+    width: .5vw;
+    height: .5vw;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -.25vw 0 0 -.25vw;
 }
 
 #slider-main .swiper-pagination-bullet-active {
+    border-color: white;
+}
+
+#slider-main .swiper-pagination-bullet-active:before {
     background: white;
     border-radius: 0;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    width: 10vw;
+    left: calc(50% - 6vw);
+    border-radius: 3px;
+    padding: 0.65vw 1vw;
+    display: inline-block;
+    background-color: rgba(46,49,61,.6);
+    bottom: 2.5vw;
 }
 
 section .container > .title {
@@ -190,16 +222,16 @@ section .container > .title {
     font-family: "SomeFont", sans-serif;
     text-align: center;
     color: #ea2839;
-    margin: 0 0 2.5vw 0;
+    margin: 0 0 2.35vw 0;
 }
 
-#who-are-we {
+#about-us {
     background: url("../images/who-are-we-bg.png") center no-repeat;
     background-size: cover;
     padding: 6.5vw 0 2.5vw 0;
 }
 
-#who-are-we p {
+#about-us p {
     padding: 0 4.2vw;
     font-size: 1.82vw;
     line-height: 2.2vw;
@@ -209,6 +241,11 @@ section .container > .title {
 }
 
 #offers {
+    padding-top: 6.5vw;
+    background: url("../images/how-buy-bg.png") 50% -5% no-repeat;
+}
+
+#offers .elem-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -222,40 +259,39 @@ section .container > .title {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-#offers .elem:first-child > .title {
-    position: static;
-    font-size: 4.5vw;
-    color: #ea2839;
-    padding: 0 3.5vw;
+#offers .elem:first-child {
+    background-image: url("../images/metallic-racks.jpg");
+    background-position-x: 0%;
 }
 
 #offers .elem:nth-child(2) {
-    background-image: url("../images/metallic-racks.jpg");
+    background-image: url("../images/metallic-furniture.jpg");
+    background-position-x: 45%;
 }
 
 #offers .elem:nth-child(3) {
-    background-image: url("../images/metallic-furniture.jpg");
-    background-position-x: 85%;
-}
-
-#offers .elem:nth-child(4) {
     background-image: url("../images/warehouse-equipment.jpg");
     background-position-x: 0%;
 }
 
-#offers .elem:nth-child(5) {
+#offers .elem:nth-child(4) {
     background-color: #52687f;
     background-image: url("../images/retail-store-equipment.png");
     background-size: auto;
 }
 
-#offers .elem:last-child {
+#offers .elem:nth-child(5) {
     background-color: #52687f;
     background-image: url("../images/services.png");
     background-position-y: 80%;
     background-size: auto;
+}
+
+#offers .elem:last-child {
+    background-color: #3b3f4d;
 }
 
 #offers .elem > .title {
@@ -267,10 +303,18 @@ section .container > .title {
     font-size: 2.22vw;
     color: white;
     padding: 0 2.2vw;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-#offers .elem:hover:not(:first-child) > .title {
-    display: none;
+#offers .elem .title:hover {
+    color: #fcb623;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 #offers .elem .info {
@@ -279,37 +323,88 @@ section .container > .title {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
-    background-color: rgba(59, 63, 77, 0.8);
-    padding-left: 2.2vw;
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
-    z-index: 99;
+    background-color: transparent;
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
 }
 
-#offers .elem .info .wrapper {
+#offers .elem .wrapper {
     position: absolute;
-    bottom: 3.5vw;
+    max-width: 100%;
+    padding-left: 2vw;
+    -webkit-transition: bottom 0.3s ease;
+    -moz-transition: bottom 0.3s ease;
+    -o-transition: bottom 0.3s ease;
+    transition: bottom 0.3s ease;
 }
 
-#offers .elem .info .title {
-    padding: 0;
+#offers .elem:first-child .wrapper {
+    bottom: -8.8vw;
 }
 
-#offers .elem .info .text {
-    font-size: 1.32vw;
-    color: white;
+#offers .elem:nth-child(2) .wrapper {
+    bottom: -4.85vw;
+}
+
+#offers .elem:nth-child(3) .wrapper {
+    bottom: -7.6vw;
+}
+
+#offers .elem:nth-child(4) .wrapper {
+    bottom: -4.8vw;
+}
+
+#offers .elem:nth-child(5) .wrapper {
+    bottom: -7.5vw;
 }
 
 #offers .elem:hover .info {
+    background-color: rgba(59, 63, 77, 0.8);
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
+}
+
+#offers .elem:hover .wrapper {
+    bottom: 3.5vw;
+    -webkit-transition: bottom 0.3s ease;
+    -moz-transition: bottom 0.3s ease;
+    -o-transition: bottom 0.3s ease;
+    transition: bottom 0.3s ease;
+}
+
+#offers .elem:hover .text,
+#offers .elem:hover .btn-more {
     opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease;
+    -o-transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease;
+}
+
+#offers .elem .title {
+    padding: 0;
+}
+
+#offers .elem .text {
+    font-size: 1.32vw;
+    color: white;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease;
+    -o-transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease;
+}
+
+#offers .elem .btn-more {
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease;
+    -o-transition: opacity 0.6s ease;
+    transition: opacity 0.6s ease;
 }
 
 #what-new {
@@ -324,55 +419,53 @@ section .container > .title {
 #what-new .news {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 #what-new .elem {
-    width: 31%;
+    width: 100%;
     max-height: 32vw;
-    overflow-y: hidden;
+    overflow: auto;
     margin-bottom: 3.5vw;
     text-align: left;
 }
 
 #what-new .elem .photo {
-    width: 100%;
+    float: left;
+    width: 31%;
     height: 10.5vw;
     background-position-y: 95%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../images/news-2.jpg");
-}
-
-#what-new .elem-1 {
-    width: 65%;
-}
-
-#what-new .elem-3,
-#what-new .elem-4 {
-    width: 30.6%;
-}
-
-#what-new .elem-1 .photo {
-    height: 16.5vw;
     background-position: 10% 80%;
     background-image: url("../images/news-1.jpg");
 }
 
 #what-new .elem .info {
-    background-color: #ea2839;
-    color: white;
-    padding: 1.5vw 2vw;
-}
-
-#what-new .elem-1 .info {
-    padding: 1.5vw;
+    width: calc(69% - 2vw);
+    height: 9.5vw;
+    float: right;
+    background-color: white;
+    color: #3b3f4d;
+    padding: 0.5vw 1vw;
 }
 
 #what-new .elem .info .title {
-    font-size: 2.65vw;
-    margin: 0 0 0.8vw 0;
+    font-size: 1.75vw;
+    margin: 0 0 0.45vw 0;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+#what-new .elem:hover .info .title {
+    color: #ea2839;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 #what-new .elem .info .date {
@@ -380,6 +473,7 @@ section .container > .title {
     font-size: 1.1vw;
     display: inline-block;
     background-color: #3b3f4d;
+    color: white;
     padding: 0.2vw 0.5vw;
 }
 
@@ -387,7 +481,7 @@ section .container > .title {
     font-family: "SomeFont2", "SomeFont", sans-serif;
     font-size: 1.32vw;
     line-height: 1.5vw;
-    margin-bottom: 1.9vw;
+    margin: 0.5vw 0 0 0;
 }
 
 .btn-load-more {
@@ -408,7 +502,6 @@ section .container > .title {
 }
 
 #how-buy {
-    background: url("../images/how-buy-bg.png") center no-repeat;
     padding: 6.5vw 0 2.5vw 0;
 }
 
@@ -468,14 +561,17 @@ section .container > .title {
 
 #how-buy .elements .site {
     background-image: url("../images/how-buy-site.jpg");
+    background-position-y: 0%;
 }
 
 #how-buy .elements .office {
     background-image: url("../images/how-buy-office.jpg");
+    background-position-y: 100%;
 }
 
 #how-buy .elements .phone {
     background-image: url("../images/how-buy-phone.jpg");
+    background-position-y: 25%;
 }
 
 #how-buy .elements .elem p {
@@ -521,6 +617,7 @@ section .container > .title {
     font-size: 1.8vw;
     line-height: 2vw;
     text-align: center;
+    margin-bottom: 3.5vw;
 }
 
 #work-process .wrapper {
@@ -531,25 +628,26 @@ section .container > .title {
     justify-content: space-between;
     margin: 0 auto;
     background-color: white;
-    padding: 3vw 0;
+    padding: 3.4vw 0;
 }
 
 #work-process .wrapper .left {
     width: 30%;
-    padding-left: 2.5vw;
+    padding-left: 2.3vw;
 }
 
-#work-process .wrapper ul {
+#work-process .wrapper .left ul {
     padding: 0;
     margin: 0;
 }
 
-#work-process .wrapper li:not(.points) {
+#work-process .wrapper .left li:not(.points) {
     list-style-type: none;
     height: 3vw;
+    cursor: pointer;
 }
 
-#work-process .wrapper li:not(.points) span {
+#work-process .wrapper .left li:not(.points) span {
     display: block;
     width: 2.5vw;
     height: 2.5vw;
@@ -567,7 +665,7 @@ section .container > .title {
     transition: all 0.3s ease;
 }
 
-#work-process .wrapper li:not(.points).active span {
+#work-process .wrapper .left li:not(.points).active span {
     background-color: #ea2839;
     color: white;
     -webkit-transition: all 0.3s ease;
@@ -576,7 +674,7 @@ section .container > .title {
     transition: all 0.3s ease;
 }
 
-#work-process .wrapper li:not(.points) a {
+#work-process .wrapper .left li:not(.points) a {
     color: #707480;
     text-decoration: none;
     font-size: 1.4vw;
@@ -587,7 +685,7 @@ section .container > .title {
     transition: all 0.3s ease;
 }
 
-#work-process .wrapper li:not(.points).active a {
+#work-process .wrapper .left li:not(.points).active a {
     color: #515562;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -595,14 +693,14 @@ section .container > .title {
     transition: all 0.3s ease;
 }
 
-#work-process .wrapper li.points {
+#work-process .wrapper .left li.points {
     list-style-type: none;
-    margin: 0.5vw 0 0.5vw 1.35vw;
+    margin: 0.5vw 0 0.5vw 1.2vw;
 }
 
 #work-process .wrapper .right {
     position: relative;
-    width: 70%;
+    width: 75%;
 }
 
 #work-process .wrapper .right > div {
@@ -611,11 +709,22 @@ section .container > .title {
     opacity: 0;
 }
 
+#work-process .wrapper .right > div a {
+    color: #ea2839;
+}
+
 #work-process .wrapper .right .consultation {
     opacity: 1;
 }
 
-#work-process .wrapper .right p {
+#work-process .wrapper .right p,
+#work-process .wrapper .right li {
     font-family: "SomeFont2", "SomeFont", sans-serif;
-    margin: 0 0 1.5vw 0;
+    font-size: 1.4vw;
+    margin: 0 0 1.2vw 0;
+    line-height: 1.8vw;
+}
+
+#work-process .wrapper .right li {
+    margin: 0 0 0.1vw 0;
 }
