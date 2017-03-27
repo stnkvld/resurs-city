@@ -1,0 +1,621 @@
+@font-face {
+    font-family: "SomeFont";
+    src: url("../fonts/Fnytgkxfvdppazuaixuwgsenwjc.ttf");
+}
+
+@font-face {
+    font-family: "SomeFont2";
+    src: url("../fonts/Yonmohavnvqvjdpirwgvjharyzu.ttf");
+}
+
+* {
+    font-family: "SomeFont", "Arial", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 93%;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: #3b3f4d;
+    padding: 0.5vw 0;
+}
+
+#header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header .logo {
+    width: 20vw;
+    float: left;
+}
+
+#header .logo img {
+    max-width: 100%;
+}
+
+#header .wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header .menu {
+    width: 55.5%;
+}
+
+#header .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#header .menu ul li {
+    list-style-type: none;
+}
+
+#header .menu ul li a {
+    font-size: 1.3vw;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+#header .menu ul li:hover a {
+    color: #ea2839;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+#header .menu li.btn-sel-wrapper {
+    width: 32%;
+    text-align: right;
+}
+
+.btn {
+    border: 0;
+    border-radius: 2.5px;
+    color: white;
+    font-size: 1.3vw;
+    font-weight: bold;
+    background-color: #ea2839;
+    outline: none;
+    cursor: pointer;
+    padding: 1vw;
+}
+
+#header .phones a {
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+#slider-main {
+    width: 100%;
+}
+
+#slider-main .swiper-slide {
+    max-height: 43.2vw;
+}
+
+#slider-main .swiper-slide img {
+    width: 100%;
+}
+
+#slider-main .swiper-slide .text {
+    width: 78%;
+    position: absolute;
+    top: 15%;
+    left: 11%;
+    text-align: center;
+    padding: 4.2vw 0;
+    background-color: rgba(59, 63, 77, 0.8);
+}
+
+#slider-main .swiper-slide .text .title {
+    font-size: 4.4vw;
+    color: white;
+    margin: 0 0 3.4vw 0;
+}
+
+.btn-more,
+.btn-send,
+.btn-contacts,
+.btn-connect,
+.btn-load-more {
+    font-size: 1.5vw;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 0.8vw 1.2vw;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-more:hover,
+.btn-contacts:hover,
+.btn-connect:hover,
+.btn-load-more:hover {
+    background-color: #ea2839;
+    border-color: #ea2839;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-more span,
+.btn-contacts span,
+.btn-connect span,
+.btn-load-more span {
+    margin-left: 1vw;
+}
+
+#slider-main .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ea2839;
+}
+
+#slider-main .swiper-pagination-bullet-active {
+    background: white;
+    border-radius: 0;
+}
+
+section .container > .title {
+    font-size: 4.4vw;
+    font-family: "SomeFont", sans-serif;
+    text-align: center;
+    color: #ea2839;
+    margin: 0 0 2.5vw 0;
+}
+
+#who-are-we {
+    background: url("../images/who-are-we-bg.png") center no-repeat;
+    background-size: cover;
+    padding: 6.5vw 0 2.5vw 0;
+}
+
+#who-are-we p {
+    padding: 0 4.2vw;
+    font-size: 1.82vw;
+    line-height: 2.2vw;
+    text-align: center;
+    color: white;
+    margin-bottom: 2.4vw;
+}
+
+#offers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#offers .elem {
+    position: relative;
+    width: calc(100%/3);
+    height: 33.5vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#offers .elem:first-child > .title {
+    position: static;
+    font-size: 4.5vw;
+    color: #ea2839;
+    padding: 0 3.5vw;
+}
+
+#offers .elem:nth-child(2) {
+    background-image: url("../images/metallic-racks.jpg");
+}
+
+#offers .elem:nth-child(3) {
+    background-image: url("../images/metallic-furniture.jpg");
+    background-position-x: 85%;
+}
+
+#offers .elem:nth-child(4) {
+    background-image: url("../images/warehouse-equipment.jpg");
+    background-position-x: 0%;
+}
+
+#offers .elem:nth-child(5) {
+    background-color: #52687f;
+    background-image: url("../images/retail-store-equipment.png");
+    background-size: auto;
+}
+
+#offers .elem:last-child {
+    background-color: #52687f;
+    background-image: url("../images/services.png");
+    background-position-y: 80%;
+    background-size: auto;
+}
+
+#offers .elem > .title {
+    position: absolute;
+    bottom: 3.5vw;
+}
+
+#offers .elem .title {
+    font-size: 2.22vw;
+    color: white;
+    padding: 0 2.2vw;
+}
+
+#offers .elem:hover:not(:first-child) > .title {
+    display: none;
+}
+
+#offers .elem .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(59, 63, 77, 0.8);
+    padding-left: 2.2vw;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#offers .elem .info .wrapper {
+    position: absolute;
+    bottom: 3.5vw;
+}
+
+#offers .elem .info .title {
+    padding: 0;
+}
+
+#offers .elem .info .text {
+    font-size: 1.32vw;
+    color: white;
+}
+
+#offers .elem:hover .info {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+#what-new {
+    background-color: #3b3f4d;
+    padding: 6.5vw 0.5vw 2.5vw 1.5vw;
+}
+
+#what-new .container {
+    text-align: center;
+}
+
+#what-new .news {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#what-new .elem {
+    width: 31%;
+    max-height: 32vw;
+    overflow-y: hidden;
+    margin-bottom: 3.5vw;
+    text-align: left;
+}
+
+#what-new .elem .photo {
+    width: 100%;
+    height: 10.5vw;
+    background-position-y: 95%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/news-2.jpg");
+}
+
+#what-new .elem-1 {
+    width: 65%;
+}
+
+#what-new .elem-3,
+#what-new .elem-4 {
+    width: 30.6%;
+}
+
+#what-new .elem-1 .photo {
+    height: 16.5vw;
+    background-position: 10% 80%;
+    background-image: url("../images/news-1.jpg");
+}
+
+#what-new .elem .info {
+    background-color: #ea2839;
+    color: white;
+    padding: 1.5vw 2vw;
+}
+
+#what-new .elem-1 .info {
+    padding: 1.5vw;
+}
+
+#what-new .elem .info .title {
+    font-size: 2.65vw;
+    margin: 0 0 0.8vw 0;
+}
+
+#what-new .elem .info .date {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.1vw;
+    display: inline-block;
+    background-color: #3b3f4d;
+    padding: 0.2vw 0.5vw;
+}
+
+#what-new .elem .info .text {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.32vw;
+    line-height: 1.5vw;
+    margin-bottom: 1.9vw;
+}
+
+.btn-load-more {
+    margin-bottom: 1.2vw;
+    color: #707480;
+    border-color: #707480;
+}
+
+.btn-load-more:hover {
+    background-color: #707480;
+    border-color: #707480;
+    color: white;
+}
+
+.btn-load-more span {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+#how-buy {
+    background: url("../images/how-buy-bg.png") center no-repeat;
+    padding: 6.5vw 0 2.5vw 0;
+}
+
+#how-buy .container .title {
+    margin-bottom: 2.4vw;
+}
+
+#how-buy .elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#how-buy .elements .elem {
+    position: relative;
+    width: calc(100%/3);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1.5vw 2vw;
+    text-align: center;
+}
+
+#how-buy .elements .elem:first-child {
+    width: calc(100%/3 - 3.5vw);
+    padding-left: 3.5vw;
+}
+
+#how-buy .elements .elem:last-child {
+    padding-right: 3.5vw;
+}
+
+#how-buy .elements .elem .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(59, 63, 77, 0.6);
+    z-index: 1;
+}
+
+#how-buy .elements .elem .info {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    color: white;
+}
+
+#how-buy .elements .elem .title {
+    font-size: 2.65vw;
+    color: #ea2839;
+    text-align: left;
+    margin: 0 0 1vw 0;
+}
+
+#how-buy .elements .site {
+    background-image: url("../images/how-buy-site.jpg");
+}
+
+#how-buy .elements .office {
+    background-image: url("../images/how-buy-office.jpg");
+}
+
+#how-buy .elements .phone {
+    background-image: url("../images/how-buy-phone.jpg");
+}
+
+#how-buy .elements .elem p {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.36vw;
+    text-align: left;
+    margin: 0 0 1.2vw 0;
+}
+
+#how-buy .elements .office .info p,
+#how-buy .elements .phone .info p {
+    margin-bottom: 4.85vw;
+}
+
+#how-buy .elements .elem .form-group {
+    text-align: left;
+    margin-bottom: 1.5vw;
+}
+
+#how-buy .elements .elem .form-group label {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.35vw;
+    margin-right: 0.5vw;
+}
+
+#how-buy .elements .elem .form-group input {
+    max-width: 10.5vw;
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    border: 0;
+    border-radius: 2.5px;
+    padding: 0.4vw 0.5vw;
+    font-size: 1.5vw;
+    outline: none;
+}
+
+#work-process {
+    padding: 6.5vw 0 2.5vw 0;
+    background-color: #f1f1f1;
+}
+
+#work-process .container > p {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    text-align: center;
+}
+
+#work-process .wrapper {
+    width: 86%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: white;
+    padding: 3vw 0;
+}
+
+#work-process .wrapper .left {
+    width: 30%;
+    padding-left: 2.5vw;
+}
+
+#work-process .wrapper ul {
+    padding: 0;
+    margin: 0;
+}
+
+#work-process .wrapper li:not(.points) {
+    list-style-type: none;
+    height: 3vw;
+}
+
+#work-process .wrapper li:not(.points) span {
+    display: block;
+    width: 2.5vw;
+    height: 2.5vw;
+    line-height: 2.5vw;
+    text-align: center;
+    float: left;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    font-size: 1.5vw;
+    color: #707480;
+    margin-right: 1vw;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#work-process .wrapper li:not(.points).active span {
+    background-color: #ea2839;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#work-process .wrapper li:not(.points) a {
+    color: #707480;
+    text-decoration: none;
+    font-size: 1.4vw;
+    line-height: 2.5vw;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#work-process .wrapper li:not(.points).active a {
+    color: #515562;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#work-process .wrapper li.points {
+    list-style-type: none;
+    margin: 0.5vw 0 0.5vw 1.35vw;
+}
+
+#work-process .wrapper .right {
+    position: relative;
+    width: 70%;
+}
+
+#work-process .wrapper .right > div {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+}
+
+#work-process .wrapper .right .consultation {
+    opacity: 1;
+}
+
+#work-process .wrapper .right p {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    margin: 0 0 1.5vw 0;
+}
