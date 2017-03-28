@@ -1,7 +1,9 @@
 $(document).ready(function() {
     var sliderMain = new Swiper ("#slider-main", {
         pagination: '.swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        autoplay: 5000,
+        speed: 600
     });
 
     $("#work-process .wrapper .left li").on("click", function() {
@@ -25,6 +27,4 @@ $(document).ready(function() {
         }
         $(this).addClass("active");
     });
-
-    // $(".swiper-container-horizontal>.swiper-pagination-bullets").css({"width": "auto", "margin-left", 0-$(this).width()});
 });

@@ -8,6 +8,11 @@
     src: url("../fonts/Yonmohavnvqvjdpirwgvjharyzu.ttf");
 }
 
+@font-face {
+    font-family: "DinPro";
+    src: url("../fonts/DINPro.otf");
+}
+
 * {
     font-family: "SomeFont", "Arial", sans-serif;
 }
@@ -22,12 +27,14 @@ body {
     margin: 0 auto;
 }
 
-#header {
+#header,
+#footer {
     background-color: #3b3f4d;
     padding: 0.5vw 0;
 }
 
-#header .container {
+#header .container,
+#footer .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -38,7 +45,8 @@ body {
     float: left;
 }
 
-#header .logo img {
+#header .logo img,
+#footer .logo img {
     max-width: 100%;
 }
 
@@ -626,7 +634,7 @@ section .container > .title {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto 4.5vw auto;
     background-color: white;
     padding: 3.4vw 0;
 }
@@ -695,7 +703,7 @@ section .container > .title {
 
 #work-process .wrapper .left li.points {
     list-style-type: none;
-    margin: 0.5vw 0 0.5vw 1.2vw;
+    margin: 0.3vw 0 0.3vw 1.2vw;
 }
 
 #work-process .wrapper .right {
@@ -727,4 +735,151 @@ section .container > .title {
 
 #work-process .wrapper .right li {
     margin: 0 0 0.1vw 0;
+}
+
+#footer .container {
+    align-items: center;
+}
+
+#footer .logo {
+    width: 10.5vw;
+}
+
+#footer div,
+#footer p {
+    font-size: 1.1vw;
+    color: white;
+}
+
+#footer .design-by {
+    width: 16.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .design-by p {
+    font-size: 1.05vw;
+    line-height: 1.05vw;
+    font-family: "DinPro", sans-serif;
+}
+
+#main-title {
+    height: 26vw;
+    overflow: hidden;
+    background: url("../images/slider-main-1.jpg") 50% 43% no-repeat;
+}
+
+#main-title .title {
+    width: 78%;
+    text-align: center;
+    padding: 4.2vw 0;
+    font-size: 4.4vw;
+    color: white;
+    margin: 6.5vw auto;
+    background-color: rgba(59, 63, 77, 0.8);
+}
+
+#services {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 3.5%;
+}
+
+#services .elem {
+    padding-top: 0.5vw;
+    width: calc(100%/3);
+    text-align: center;
+    /*border-right: 1px solid #707480;
+    border-bottom: 1px solid #707480;*/
+}
+
+#services .elem .wrapper {
+    padding: 0 1.8vw;
+}
+
+#services .elem .icon {
+    height: 10vw;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+#services .elem .title {
+    height: 3.8vw;
+    font-size: 1.75vw;
+    text-align: left;
+    margin: 1vw 0;
+}
+
+#services .elem .text {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.3vw;
+    text-align: left;
+    max-height: 13.5vw;
+    overflow: hidden;
+}
+
+#services .elem:first-child .title,
+#services .elem:nth-child(4) .title,
+#services .elem:first-child .text,
+#services .elem:nth-child(4) .text {
+    padding-right: 5.3vw;
+}
+
+#services .elem:first-child .icon,
+#services .elem:nth-child(4) .icon {
+    width: calc(100% - 5.3vw);
+}
+
+#services .elem:nth-child(2) .title,
+#services .elem:nth-child(5) .title,
+#services .elem:nth-child(2) .text,
+#services .elem:nth-child(5) .text {
+    padding: 0 2.65vw;
+}
+
+#services .elem:nth-child(2) .icon,
+#services .elem:nth-child(5) .icon {
+    width: calc(100% - 5.3vw);
+    margin: 0 auto;
+}
+
+#services .elem:last-child .title,
+#services .elem:nth-child(3) .title,
+#services .elem:last-child .text,
+#services .elem:nth-child(3) .text {
+    padding-left: 5.3vw;
+}
+
+#services .elem:last-child .icon,
+#services .elem:nth-child(3) .icon {
+    width: calc(100% - 5.3vw);
+    margin-left: 5.3vw;
+}
+
+#services .elem:first-child .icon {
+    background-image: url("../images/service-metering.png");
+}
+
+#services .elem:nth-child(2) .icon {
+    background-image: url("../images/service-reliability.png");
+}
+
+#services .elem:nth-child(3) .icon {
+    background-image: url("../images/service-assembly.png");
+}
+
+#services .elem:nth-child(4) .icon {
+    background-image: url("../images/service-delivery.png");
+}
+
+#services .elem:nth-child(5) .icon {
+    background-image: url("../images/service-sales.png");
+}
+
+#services .elem:last-child .icon {
+    background-image: url("../images/service-climb.png");
 }
