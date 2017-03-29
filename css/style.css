@@ -22,6 +22,12 @@ body {
     padding: 0;
 }
 
+p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
 .container {
     width: 93%;
     margin: 0 auto;
@@ -152,7 +158,8 @@ body {
 .btn-send,
 .btn-contacts,
 .btn-connect,
-.btn-load-more {
+.btn-load-more,
+.btn-prices {
     font-size: 1.5vw;
     background-color: transparent;
     border: 1px solid white;
@@ -164,6 +171,7 @@ body {
 }
 
 .btn-more:hover,
+.btn-send:hover,
 .btn-contacts:hover,
 .btn-connect:hover,
 .btn-load-more:hover {
@@ -215,6 +223,17 @@ body {
     border-radius: 0;
 }
 
+#slider-main .down {
+    width: 3vw;
+}
+
+#slider-main .down {
+    position: absolute;
+    left: calc(50% - 1.5vw);
+    bottom: 0;
+    z-index: 99;
+}
+
 .swiper-container-horizontal>.swiper-pagination-bullets {
     width: 10vw;
     left: calc(50% - 6vw);
@@ -250,7 +269,8 @@ section .container > .title {
 
 #offers {
     padding-top: 6.5vw;
-    background: url("../images/how-buy-bg.png") 50% -5% no-repeat;
+    background: url("../images/how-buy-bg.png") 50% 40% no-repeat;
+    background-size: cover;
 }
 
 #offers .elem-wrapper {
@@ -270,35 +290,35 @@ section .container > .title {
     overflow: hidden;
 }
 
-#offers .elem:first-child {
+#offers .elem.mettalic-racks {
     background-image: url("../images/metallic-racks.jpg");
     background-position-x: 0%;
 }
 
-#offers .elem:nth-child(2) {
+#offers .elem.metallic-furniture {
     background-image: url("../images/metallic-furniture.jpg");
     background-position-x: 45%;
 }
 
-#offers .elem:nth-child(3) {
+#offers .elem.warehouse-equipment {
     background-image: url("../images/warehouse-equipment.jpg");
     background-position-x: 0%;
 }
 
-#offers .elem:nth-child(4) {
+#offers .elem.retail-store-equipment {
     background-color: #52687f;
     background-image: url("../images/retail-store-equipment.png");
     background-size: auto;
 }
 
-#offers .elem:nth-child(5) {
+#offers .elem.services {
     background-color: #52687f;
     background-image: url("../images/services.png");
     background-position-y: 80%;
     background-size: auto;
 }
 
-#offers .elem:last-child {
+#offers .elem.empty {
     background-color: #3b3f4d;
 }
 
@@ -342,30 +362,13 @@ section .container > .title {
     position: absolute;
     max-width: 100%;
     padding-left: 2vw;
-    -webkit-transition: bottom 0.3s ease;
-    -moz-transition: bottom 0.3s ease;
-    -o-transition: bottom 0.3s ease;
-    transition: bottom 0.3s ease;
-}
-
-#offers .elem:first-child .wrapper {
-    bottom: -8.8vw;
-}
-
-#offers .elem:nth-child(2) .wrapper {
-    bottom: -4.85vw;
-}
-
-#offers .elem:nth-child(3) .wrapper {
-    bottom: -7.6vw;
-}
-
-#offers .elem:nth-child(4) .wrapper {
-    bottom: -4.8vw;
-}
-
-#offers .elem:nth-child(5) .wrapper {
-    bottom: -7.5vw;
+    height: auto;
+    max-height: 2.5vw;
+    bottom: 3.5vw;
+    -webkit-transition: max-height 0.4s ease;
+    -moz-transition: max-height 0.4s ease;
+    -o-transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease;
 }
 
 #offers .elem:hover .info {
@@ -377,11 +380,11 @@ section .container > .title {
 }
 
 #offers .elem:hover .wrapper {
-    bottom: 3.5vw;
-    -webkit-transition: bottom 0.3s ease;
-    -moz-transition: bottom 0.3s ease;
-    -o-transition: bottom 0.3s ease;
-    transition: bottom 0.3s ease;
+    max-height: 20vw;
+    -webkit-transition: max-height 0.4s ease;
+    -moz-transition: max-height 0.4s ease;
+    -o-transition: max-height 0.6s ease;
+    transition: max-height 0.4s ease;
 }
 
 #offers .elem:hover .text,
@@ -398,7 +401,8 @@ section .container > .title {
 }
 
 #offers .elem .text {
-    font-size: 1.32vw;
+    width: 96.1%;
+    font-size: 1.3vw;
     color: white;
     opacity: 0;
     -webkit-transition: opacity 0.6s ease;
@@ -510,7 +514,7 @@ section .container > .title {
 }
 
 #how-buy {
-    padding: 6.5vw 0 2.5vw 0;
+    padding: 5.5vw 0 3.5vw 0;
 }
 
 #how-buy .container .title {
@@ -655,7 +659,7 @@ section .container > .title {
     cursor: pointer;
 }
 
-#work-process .wrapper .left li:not(.points) span {
+#work-process .wrapper .left li:not(.points) span:not(.a) {
     display: block;
     width: 2.5vw;
     height: 2.5vw;
@@ -673,7 +677,7 @@ section .container > .title {
     transition: all 0.3s ease;
 }
 
-#work-process .wrapper .left li:not(.points).active span {
+#work-process .wrapper .left li:not(.points).active span:not(.a) {
     background-color: #ea2839;
     color: white;
     -webkit-transition: all 0.3s ease;
@@ -682,7 +686,7 @@ section .container > .title {
     transition: all 0.3s ease;
 }
 
-#work-process .wrapper .left li:not(.points) a {
+#work-process .wrapper .left li:not(.points) .a {
     color: #707480;
     text-decoration: none;
     font-size: 1.4vw;
@@ -693,7 +697,7 @@ section .container > .title {
     transition: all 0.3s ease;
 }
 
-#work-process .wrapper .left li:not(.points).active a {
+#work-process .wrapper .left li:not(.points).active .a {
     color: #515562;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -715,6 +719,10 @@ section .container > .title {
     position: absolute;
     width: 100%;
     opacity: 0;
+}
+
+#work-process .wrapper .right > div:not(:first-child) {
+    display: none;
 }
 
 #work-process .wrapper .right > div a {
@@ -769,6 +777,7 @@ section .container > .title {
     height: 26vw;
     overflow: hidden;
     background: url("../images/slider-main-1.jpg") 50% 43% no-repeat;
+    background-size: cover;
 }
 
 #main-title .title {
@@ -786,19 +795,25 @@ section .container > .title {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 3.5%;
 }
 
 #services .elem {
     padding-top: 0.5vw;
-    width: calc(100%/3);
+    width: calc(93%/3 - 2px);
     text-align: center;
-    /*border-right: 1px solid #707480;
-    border-bottom: 1px solid #707480;*/
+    border-bottom: 1px solid #707480;
 }
 
-#services .elem .wrapper {
+#services .elem:first-child .wrapper,
+#services .elem:nth-child(2) .wrapper,
+#services .elem:nth-child(3) .wrapper {
     padding: 0 1.8vw;
+}
+
+#services .elem:nth-child(4) .wrapper,
+#services .elem:nth-child(5) .wrapper,
+#services .elem:last-child .wrapper {
+    padding: 1.6vw 1.8vw 0 1.8vw;
 }
 
 #services .elem .icon {
@@ -811,7 +826,7 @@ section .container > .title {
     height: 3.8vw;
     font-size: 1.75vw;
     text-align: left;
-    margin: 1vw 0;
+    margin: 1vw 0 0.8vw 0;
 }
 
 #services .elem .text {
@@ -820,30 +835,47 @@ section .container > .title {
     text-align: left;
     max-height: 13.5vw;
     overflow: hidden;
+    margin: 0 0 2.5vw 0;
+}
+
+#services .elem:first-child,
+#services .elem:nth-child(4) {
+    padding-left: 3.5%;
+}
+
+#services .elem:nth-child(3),
+#services .elem:last-child {
+    padding-right: 3.5%;
+}
+
+#services .elem:nth-child(2),
+#services .elem:nth-child(5) {
+    border-left: 1px solid rgb(157, 159, 166);
+    border-right: 1px solid rgb(157, 159, 166);
 }
 
 #services .elem:first-child .title,
 #services .elem:nth-child(4) .title,
 #services .elem:first-child .text,
 #services .elem:nth-child(4) .text {
-    padding-right: 5.3vw;
+    padding-right: 5.5vw;
 }
 
 #services .elem:first-child .icon,
 #services .elem:nth-child(4) .icon {
-    width: calc(100% - 5.3vw);
+    width: calc(100% - 5.5vw);
 }
 
 #services .elem:nth-child(2) .title,
 #services .elem:nth-child(5) .title,
 #services .elem:nth-child(2) .text,
 #services .elem:nth-child(5) .text {
-    padding: 0 2.65vw;
+    padding: 0 2.75vw;
 }
 
 #services .elem:nth-child(2) .icon,
 #services .elem:nth-child(5) .icon {
-    width: calc(100% - 5.3vw);
+    width: calc(100% - 5.5vw);
     margin: 0 auto;
 }
 
@@ -851,13 +883,15 @@ section .container > .title {
 #services .elem:nth-child(3) .title,
 #services .elem:last-child .text,
 #services .elem:nth-child(3) .text {
-    padding-left: 5.3vw;
+    padding-left: 5vw;
+    padding-right: 0.3vw;
 }
 
 #services .elem:last-child .icon,
 #services .elem:nth-child(3) .icon {
-    width: calc(100% - 5.3vw);
-    margin-left: 5.3vw;
+    width: calc(100% - 5.5vw);
+    margin-left: 5vw;
+    padding-right: 0.3vw;
 }
 
 #services .elem:first-child .icon {
@@ -882,4 +916,623 @@ section .container > .title {
 
 #services .elem:last-child .icon {
     background-image: url("../images/service-climb.png");
+}
+
+#services + #how-buy {
+    background: url("../images/how-buy-bg.png") 50% 40% no-repeat;
+    background-size: cover
+}
+
+.overlay {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(59, 63, 77, 0.8);
+    z-index: 999;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    width: 30%;
+    height: 22vw;
+    top: calc(50% - 11vw);
+    left: 35%;
+    z-index: 9999;
+    background-color: white;
+}
+
+.modal .title {
+    font-size: 2.5vw;
+    padding-left: 1.8vw;
+    line-height: 2.4vw;
+    margin-bottom: 1vw;
+}
+
+.modal .title span {
+    color: #ea2839;
+}
+
+.modal .btn-send {
+    font-size: 1.3vw;
+    padding: 0.6vw 1.2vw;
+    background-color: #ea2839;
+    color: white;
+    outline: none;
+    margin: 0.8vw 0 1.5vw 0;
+    border: 1px solid #ea2839;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+.modal form {
+    padding-left: 1.8vw;
+}
+
+.modal .form-group {
+    width: 78%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 2.5px;
+    margin-bottom: 1vw;
+}
+
+.modal .form-group .icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    padding: 0.15vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-right: 1px solid rgb(191, 191, 191);
+}
+
+.modal .form-group.name .icon {
+    background-image: url("../images/person-icon.png");
+}
+
+.modal .form-group.phone .icon {
+    background-image: url("../images/phone-icon.png");
+}
+
+.modal .form-group.email .icon {
+    background-image: url("../images/mail-icon.png");
+}
+
+.modal .form-group input {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    padding: 0.15vw 0 0.15vw 0.8vw;
+    font-size: 1.3vw;
+    outline: none;
+    border: none;
+}
+
+.modal .close {
+    position: absolute;
+    width: 2.1vw;
+    height: 2.1vw;
+    top: 0.9vw;
+    right: 0.9vw;
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 2.5px;
+    background: url("../images/close.png") center no-repeat;
+    background-color: transparent;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    background-image: url("../images/close-white.png");
+    background-color: #ea2839;
+    border-color: #ea2839;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#main-title.section {
+    height: 43.5vw;
+}
+
+#main-title.section .title {
+    margin: 13.5vw auto;
+}
+
+#offers.offers-section {
+    background: none;
+}
+
+#offers.offers-section .elem:first-child {
+    background-image: url("../images/section-depth.jpg");
+}
+
+#offers.offers-section .elem:nth-child(2) {
+    background-image: url("../images/section-gravity.jpg");
+}
+
+#offers.offers-section .elem:nth-child(3) {
+    background-image: url("../images/section-cargo.jpg");
+}
+
+#offers.offers-section .elem:nth-child(4) {
+    background-image: url("../images/section-plastic.jpg");
+}
+
+#offers.offers-section .elem:nth-child(5) {
+    background-image: url("../images/section-console.jpg");
+}
+
+#offers.offers-section .elem:nth-child(6) {
+    background-image: url("../images/section-mezzanine.jpg");
+    background-color: #52687f;
+}
+
+#offers.offers-section .elem:nth-child(7) {
+    background-image: url("../images/section-pallete.jpg");
+    background-color: #52687f;
+}
+
+#offers.offers-section .elem:nth-child(8) {
+    background-image: url("../images/section-shelf.jpg");
+    background-color: #52687f;
+}
+
+#offers.offers-section .elem:nth-child(9) {
+    background-image: url("../images/section-self-supporting.jpg");
+    background-color: #52687f;
+}
+
+#offers.offers-section .elem:nth-child(10) {
+    background-image: url("../images/section-cash-carry.jpg");
+    background-color: #52687f;
+}
+
+#offers.offers-section .elem:nth-child(11) {
+    background-image: url("../images/section-cabel.jpg");
+    background-color: #52687f;
+}
+
+#offers.offers-section .elem:last-child {
+    background-color: transparent;
+    background-image: url("../images/section-tires.jpg");
+    background-color: #52687f;
+}
+
+#contacts {
+    position: relative;
+}
+
+#contacts .info {
+    width: 33.5%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#contacts .info .title {
+    margin: 3.6vw 0 1vw 0;
+    padding-left: 3.75vw;
+    font-size: 2.2vw;
+    text-transform: uppercase;
+    color: #ea2839;
+}
+
+#contacts .info .invoices {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    padding-left: 3.75vw;
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+    margin-top: 0;
+}
+
+#contacts .info .contacts {
+    margin-top: 3vw;
+    padding-left: 3.75vw;
+}
+
+#contacts .info .contacts li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    margin-bottom: 2.5vw;
+}
+
+#contacts .info .contacts li .icon {
+    width: 2.5vw;
+    margin-right: 1.4vw;
+}
+
+#contacts .info .contacts li .text {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    margin: 0;
+    font-size: 1.35vw;
+    line-height: 2vw;
+}
+
+#contacts .info .contacts li.mail a {
+    color: black;
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+}
+
+#contacts > ymaps {
+    height: 43.5vw !important;
+}
+
+#contacts .info .socials {
+    margin-top: 5.3vw;
+    padding-left: 3.75vw;
+}
+
+#contacts .info .socials li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1vw;
+}
+
+#contacts .info .socials li .icon {
+    background-color: #3b3f4d;
+    border-radius: 50%;
+    padding: 0.3vw;
+    margin-right: 0.5vw;
+}
+
+#contacts .info .socials li .icon img {
+    max-width: 90%;
+    vertical-align: middle;
+}
+
+#contacts .info .socials li a {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 1.35vw;
+}
+
+#offers.product-offers {
+    background: transparent;
+}
+
+#advantages {
+    padding: 6.5vw 0 2.5vw 0;
+    background: url("../images/advantages-bg.jpg") 50% 20% no-repeat;
+    background-size: cover;
+}
+
+#advantages .container > .title {
+    margin-bottom: 1.6vw;
+}
+
+#advantages .advantages-1,
+#advantages .advantages-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#advantages .advantages-1 {
+    padding: 0 2.2vw;
+    margin-bottom: 7vw;
+}
+
+#advantages .advantages-1 .elem {
+    width: calc(100%/3 - 4.4vw);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#advantages .advantages-1 .check {
+    height: 1.8vw;
+}
+
+#advantages .advantages-1 p {
+    width: 88.5%;
+    color: white;
+    font-size: 1.85vw;
+    line-height: 2.1vw;
+    margin: 0;
+}
+
+#advantages .advantages-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1vw;
+    margin-bottom: 1vw;
+}
+
+#advantages .advantages-2 .elem {
+    width: 30.5%;
+    background-color: white;
+    text-align: center;
+    padding-top: 1.3vw;
+}
+
+#advantages .advantages-2 .elem .icon {
+    height: 7.5vw;
+    line-height: 7.5vw;
+}
+
+#advantages .advantages-2 .elem .icon img {
+    vertical-align: bottom;
+}
+
+#advantages .advantages-2 .elem .title {
+    font-size: 1.85vw;
+    margin-bottom: 2.3vw;
+}
+
+#advantages .advantages-2 .elem .text {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.315vw;
+    line-height: 1.5vw;
+    text-align: left;
+    padding: 0 2vw;
+    margin-bottom: 2vw;
+}
+
+#how-choose {
+    padding: 6.5vw 0 3vw 0;
+    border-bottom: 1px solid #c4c5c9;
+}
+
+#how-choose .container > .title {
+    font-size: 2.65vw;
+    margin-bottom: 3.5vw;
+}
+
+#how-choose .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#how-choose .options .elem {
+    width: 26%;
+    padding: 0 0 0 1.75vw;
+}
+
+#how-choose .options .elem .title {
+    font-size: 1.8vw;
+    margin: 0;
+}
+
+#how-choose .options .elem .text {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.3vw;
+    margin: 1vw 0 0 0;
+}
+
+#how-choose .options .elem:first-child .text {
+    padding-right: 3vw;
+}
+
+#how-choose .options .elem:nth-child(2) .text {
+    padding-right: 2.42vw;
+}
+
+#how-choose .options .elem:last-child .text {
+    padding-right: 2.5vw;
+}
+
+#specifications {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3.8vw 0;
+}
+
+#specifications > .left {
+    width: 33%;
+    padding-top: 3vw;
+}
+
+#specifications > .left img {
+    max-width: 100%;
+}
+
+#specifications > .right {
+    width: 66.5%;
+}
+
+#specifications > .right > .title {
+    font-size: 2.65vw;
+    margin-bottom: 2.5vw;
+    color: #ea2839;
+}
+
+#specifications > .right .positions {
+    padding: 0 3.3vw 0 0;
+    margin-top: 0;
+}
+
+#specifications > .right .positions li {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-bottom: 2.5vw;
+}
+
+#specifications > .right .positions li:last-child {
+    margin-bottom: 2vw;
+}
+
+#specifications > .right .positions li .left {
+    width: 100%;
+    overflow: hidden;
+}
+
+#specifications > .right .positions li .title {
+    font-size: 1.38vw;
+    display: inline-block;
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+}
+
+#specifications > .right .positions li .line {
+    display: inline-block;
+    border-bottom: 1px dotted #c4c5c9;
+}
+
+#specifications > .right .positions li .value {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.35vw;
+    text-align: right;
+}
+
+#specifications .btn-prices {
+    background-color: #ea2839;
+    color: white;
+    margin-right: 3.4vw;
+    font-size: 1.7vw;
+    padding: 1vw 1.2vw;
+}
+
+#specifications .download-catalog {
+    display: inline-block;
+}
+
+#specifications .download-catalog a {
+    font-size: 1.3vw;
+    color: black;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#specifications .download-catalog .icon {
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-image: url("../images/download-catalog-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#specifications .download-catalog:hover .icon {
+    background-image: url("../images/download-catalog-icon-red.png");
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#specifications .download-catalog:hover a {
+    color: #ea2839;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#ransom {
+    padding: 6.5vw 0 2.5vw 0;
+}
+
+#ransom .container > .title {
+    font-size: 2.65vw;
+    margin-bottom: 2.5vw;
+}
+
+#ransom .text {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.08vw;
+    line-height: 1.5vw;
+    margin: 0 0 3vw 0;
+}
+
+#ransom .text a {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    color: #ea2839;
+}
+
+#ransom .with-image {
+    overflow: auto;
+}
+
+#ransom .with-image .text {
+    font-size: 1.3vw;
+}
+
+#ransom .with-image-1 {
+    margin-bottom: 3.3vw;
+}
+
+#ransom .with-image-1 img {
+    width: 32%;
+    float: left;
+}
+
+#ransom .with-image-1 .text {
+    float: right;
+    width: 64%;
+}
+
+#ransom .with-image-2 img {
+    width: 68%;
+    float: left;
+}
+
+#ransom .with-image-2 .text {
+    float: right;
+    width: 28%;
+}
+
+#ransom .with-image-3 {
+    width: 100%;
+    margin-top: 3.2vw;
+}
+
+#ransom .with-image-3 img {
+    width: 100%;
+    margin-bottom: 2.8vw;
+}
+
+#ransom .with-image-3 .list li {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.1vw;
+}
+
+#ransom .with-image-3 .list-1 {
+    margin-bottom: 3.6vw;
+}
+
+#ransom .with-image-3 .list-1 li {
+    list-style-image: url("../images/check.png");
+    margin-bottom: 0.6vw;
+}
+
+#ransom .with-image-3 .list-2 li {
+    color: #ea2839;
+    margin-bottom: 1.3vw;
+}
+
+#ransom .with-image-3 .list-2 li span {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    color: black;
 }

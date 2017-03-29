@@ -1,74 +1,19 @@
 <?php require_once("header.php"); ?>
-    <section id="slider-main" class="slider-main swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/slider-main-1.jpg">
-                <div class="text">
-                    <h2 class="title">Надежные стеллажи<br>для разных типов грузов</h2>
-                    <button type="button" class="btn btn-more">
-                        Подробнее <span>></span>
-                    </button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/slider-main-2.jpg">
-                <div class="text">
-                    <h2 class="title">Надежные стеллажи<br>для разных типов грузов</h2>
-                    <button type="button" class="btn btn-more">
-                        Подробнее <span>></span>
-                    </button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/slider-main-2.jpg">
-                <div class="text">
-                    <h2 class="title">Надежные стеллажи<br>для разных типов грузов</h2>
-                    <button type="button" class="btn btn-more">
-                        Подробнее <span>></span>
-                    </button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/slider-main-2.jpg">
-                <div class="text">
-                    <h2 class="title">Надежные стеллажи<br>для разных типов грузов</h2>
-                    <button type="button" class="btn btn-more">
-                        Подробнее <span>></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <a href="#about-us" class="down"><img src="images/down.png" class="down"></a>
+
+    <section id="main-title" class="main-title section">
+        <h2 class="title">Надежные стеллажи<br>для разных типов грузов</h2>
     </section>
-    <section id="about-us" class="about-us">
+    <section id="offers" class="offers offers-section">
         <div class="container">
-            <h2 class="title">О нас</h2>
-            <p>
-                ООО «РЕСУРС СИТИ»  предлагает современные складские технологии. Мы предлагаем различные складские стеллажи и мезонины стеллажи для склада, магазина, архива, различных подсобных по&shy;мещений. Все стеллажные системы полностью разборные, изготавливаются из х/к стали и могут быть оцинкованными или окрашенными в любой цвет RAL.
-            </p>
-            <p>
-                Мы не только продаем различные виды стеллажей, но предлагаем весь комплекс услуг по оснаще&shy;нию складов, магазинов, архивов или хранилищ складской техникой: тележки, штабелеры, погруз&shy;чики, ричтраки...
-            </p>
-            <p>
-                Так же оказываем полный спектр услуг по оснащению склада: консультации, выезд  замерщика, раз&shy;работка проекта, доставка, монтаж, гарантийное и послегарантийное обслуживание складского обо&shy;рудования.
-            </p>
-            <p>
-                Мы подберем и установим стеллажи, оптимально подходящие для ваших грузов и помещений.
-            </p>
-        </div>
-    </section>
-    <section id="offers" class="offers">
-        <div class="container">
-            <h2 class="title">Что мы предлагаем</h2>
+            <h2 class="title">Стеллажи металлические</h2>
         </div>
         <div class="elem-wrapper">
-            <div class="elem mettalic-racks">
+            <div class="elem">
                 <div class="info">
                     <div class="wrapper">
-                        <a href="" class="title">Стеллажи металлические</a>
+                        <a href="" class="title">Глубинные (набивные)</a>
                         <p class="text">
-                            глубинные, гравитационные, грузовые, для пла&shy;стиковой тары, консольные, мезанин, паллет&shy;ные фронтальные, полочные, самонесущие, Cash<br>& Carry, для кабельной продукции, для шин и колес.
+                            отсутствие проходов между стеллажами позво&shy;ляет максимально эффективно использовать площадь склада при этом погрузка и выгрузка осуществляется путем въезда и выезда погруз&shy;чика прямо в ячейку стеллажа
                         </p>
                         <button type="button" class="btn btn-more">
                             Подробнее <span>></span>
@@ -76,12 +21,12 @@
                     </div>
                 </div>
             </div>
-            <div class="elem metallic-furniture">
+            <div class="elem">
                 <div class="info">
                     <div class="wrapper">
-                        <a href="" class="title">Металлическая мебель</a>
+                        <a href="" class="title">Гравитационные</a>
                         <p class="text">
-                            верстаки, картотеки, шкафы бухгалтерские,<br>ключницы, почтовые ящики, сейфы, шкафы.
+                            чаще всего используются для хранения товара с ограниченным сроком годности и складов с высо&shy;ким грузооборотом
                         </p>
                         <button type="button" class="btn btn-more">
                             Подробнее <span>></span>
@@ -89,12 +34,12 @@
                     </div>
                 </div>
             </div>
-            <div class="elem warehouse-equipment">
+            <div class="elem">
                 <div class="info">
                     <div class="wrapper">
-                        <a href="" class="title">Складская техника</a>
+                        <a href="" class="title">Грузовые</a>
                         <p class="text">
-                            бензиновые, дизельные и электрические погруз&shy;чики, гидравлические тележки, платформенные тележки, подъемные столы, гидравлические, самоходные и электрические штабелеры.
+                            идеально подходят для использования при ручной обработке грузов и чаще всего применяются на торговых объектах и складах, в мастерских, СТО и производственных цехах
                         </p>
                         <button type="button" class="btn btn-more">
                             Подробнее <span>></span>
@@ -102,12 +47,12 @@
                     </div>
                 </div>
             </div>
-            <div class="elem retail-store-equipment">
+            <div class="elem">
                 <div class="info">
                     <div class="wrapper">
-                        <a href="" class="title">Торговое оборудование</a>
+                        <a href="" class="title">Для пластиковой тары</a>
                         <p class="text">
-                            для фруктов, для хлебов, островные, престен&shy;ные, стеллажи торговые, угловые.
+                            очень удобны для хранения большого ассортимен&shy;та мелкой продукции, с возможностью установки пластиковых ящиков
                         </p>
                         <button type="button" class="btn btn-more">
                             Подробнее <span>></span>
@@ -115,12 +60,12 @@
                     </div>
                 </div>
             </div>
-            <div class="elem services">
+            <div class="elem">
                 <div class="info">
                     <div class="wrapper">
-                        <a href="" class="title">Услуги</a>
+                        <a href="" class="title">Консольные</a>
                         <p class="text">
-                            замер, проектирование и производство, ремонт и сервисное обслуживание, монтаж и демонтаж стеллажей, шефмонтаж, доставка, лизинг, пере&shy;езд складар, ремонт и диагностика техники.
+                            применяют в основном для хранения длинноме&shy;рных грузов с неограниченным доступом к товарам любого наименования
                         </p>
                         <button type="button" class="btn btn-more">
                             Подробнее <span>></span>
@@ -128,67 +73,97 @@
                     </div>
                 </div>
             </div>
-            <div class="elem"></div>
-        </div>
-    </section>
-    <section id="what-new" class="what-new">
-        <div class="container">
-            <h2 class="title">Что нового</h2>
-            <div class="news">
-                <div class="elem elem-1">
-                    <div class="photo"></div>
-                    <div class="info">
-                        <h2 class="title">Последняя новость</h2>
-                        <div class="date">16.03.2017</div>
+            <div class="elem">
+                <div class="info">
+                    <div class="wrapper">
+                        <a href="" class="title">Мезонин</a>
                         <p class="text">
-                            Тут текст новости. Это может быть довольно длинный текст, даже в две или три строки. На этой плашке размещен только лишь пример текста новости. Этот текст нужен для того, чтобы пока&shy;зать пример как это будет выглядеть на работающем сайте.
+                            современная система многоярусных стеллажей, которая уже давно с успехом применяется мно&shy;гими крупными и средними предприятиями для наиболее грамотной организации свободного пространства в складских помещениях
                         </p>
-                    </div>
-                </div>
-                <div class="elem elem-2">
-                    <div class="photo"></div>
-                    <div class="info">
-                        <h2 class="title">Предпоследняя новость</h2>
-                        <div class="date">15.03.2017</div>
-                        <p class="text">
-                            Тут текст новости. Это может быть до&shy;вольно длинный текст, даже в две или три строки. На этой плашке размещен только лишь пример текста новости. Этот текст нужен для того, чтобы пока&shy;зать пример как это будет выглядеть.
-                        </p>
-                    </div>
-                </div>
-                <div class="elem elem-3">
-                    <div class="photo"></div>
-                    <div class="info">
-                        <h2 class="title">Прошедшая новость</h2>
-                        <div class="date">15.03.2017</div>
-                        <p class="text">
-                            Тут текст новости. Это может быть до&shy;вольно длинный текст, даже в две или три строки. На этой плашке размещен только лишь пример текста новости. Этот текст нужен для того, чтобы пока&shy;зать пример как это будет выглядеть.
-                        </p>
-                    </div>
-                </div>
-                <div class="elem elem-4">
-                    <div class="photo"></div>
-                    <div class="info">
-                        <h2 class="title">Прошедшая новость</h2>
-                        <div class="date">15.03.2017</div>
-                        <p class="text">
-                            Тут текст новости. Это может быть до&shy;вольно длинный текст, даже в две или три строки. На этой плашке размещен только лишь пример текста новости. Этот текст нужен для того, чтобы пока&shy;зать пример как это будет выглядеть.
-                        </p>
-                    </div>
-                </div>
-                <div class="elem elem-5">
-                    <div class="photo"></div>
-                    <div class="info">
-                        <h2 class="title">Прошедшая новость</h2>
-                        <div class="date">15.03.2017</div>
-                        <p class="text">
-                            Тут текст новости. Это может быть до&shy;вольно длинный текст, даже в две или три строки. На этой плашке размещен только лишь пример текста новости. Этот текст нужен для того, чтобы пока&shy;зать пример как это будет выглядеть.
-                        </p>
+                        <button type="button" class="btn btn-more">
+                            Подробнее <span>></span>
+                        </button>
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-load-more">
-                Загрузить еще <span>></span>
-            </button>
+            <div class="elem">
+                <div class="info">
+                    <div class="wrapper">
+                        <a href="" class="title">Паллетные фронтальные</a>
+                        <p class="text">
+                            наиболее распространенной и универсальной системой хранения паллетированных грузов для поддонов с фронтальной загрузкой типа Fin, Am, а также Euro
+                        </p>
+                        <button type="button" class="btn btn-more">
+                            Подробнее <span>></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="elem">
+                <div class="info">
+                    <div class="wrapper">
+                        <a href="" class="title">Полочные</a>
+                        <p class="text">
+                            несомненным преимуществом данных стелла&shy;жей является возможность объединения их в единый комплекс, что обеспечивает экономию пространства и облегчает доступ
+                        </p>
+                        <button type="button" class="btn btn-more">
+                            Подробнее <span>></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="elem">
+                <div class="info">
+                    <div class="wrapper">
+                        <a href="#" class="title">Самонесущие</a>
+                        <p class="text">
+                            является наиболее оптимальным выходом в тех случаях, когда нужны сроки "еще вчера", цена "бюджет эконом", согласования с архитектором "неприемлемы"
+                        </p>
+                        <button type="button" class="btn btn-more">
+                            Подробнее <span>></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="elem">
+                <div class="info">
+                    <div class="wrapper">
+                        <a href="#" class="title">Стеллажи Cash & Carry</a>
+                        <p class="text">
+                            для магазинов и гипермаркетов любого класса и уровня сложности
+                        </p>
+                        <button type="button" class="btn btn-more">
+                            Подробнее <span>></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="elem">
+                <div class="info">
+                    <div class="wrapper">
+                        <a href="#" class="title">Для кабельной продукции</a>
+                        <p class="text">
+                            предназначены для крупногабаритных катушек, мелкогабаритных, а так же могут быть комби&shy;нированными (смешанного типа)
+                        </p>
+                        <button type="button" class="btn btn-more">
+                            Подробнее <span>></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="elem">
+                <div class="info">
+                    <div class="wrapper">
+                        <a href="#" class="title">Для шин и колес</a>
+                        <p class="text">
+                            такие стеллажи сэкономят пространство, для магазинов и складов предоставят простой доступ и возможность быстрого поиска нужных колес при этом обеспечивая их бережное хране&shy;ние в вертикальном положении
+                        </p>
+                        <button type="button" class="btn btn-more">
+                            Подробнее <span>></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="how-buy" class="how-buy">
@@ -243,35 +218,35 @@
                     <ul>
                         <li class="consultation active">
                             <span>1</span>
-                            <span class="a">Консультация</span>
+                            <a>Консультация</a>
                         </li>
                         <li class="points">
                             <img src="images/3-points.png">
                         </li>
                         <li class="design">
                             <span>2</span>
-                            <span class="a">Проектирование</span>
+                            <a>Проектирование</a>
                         </li>
                         <li class="points">
                             <img src="images/3-points.png">
                         </li>
                         <li class="delivery">
                             <span>3</span>
-                            <span class="a">Доставка</span>
+                            <a>Доставка</a>
                         </li>
                         <li class="points">
                             <img src="images/3-points.png">
                         </li>
                         <li class="assembly">
                             <span>4</span>
-                            <span class="a">Монтаж оборудования</span>
+                            <a>Монтаж оборудования</a>
                         </li>
                         <li class="points">
                             <img src="images/3-points.png">
                         </li>
                         <li class="escort">
                             <span>5</span>
-                            <span class="a">Сопровождение</span>
+                            <a>Сопровождение</a>
                         </li>
                     </ul>
                 </div>
@@ -309,4 +284,5 @@
             </div>
         </div>
     </section>
+
 <?php require_once("footer.php"); ?>
