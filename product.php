@@ -189,35 +189,35 @@
                     <ul>
                         <li class="consultation active">
                             <span>1</span>
-                            <a>Консультация</a>
+                            <span class="a">Консультация</span>
                         </li>
                         <li class="points">
                             <img src="images/3-points.png">
                         </li>
                         <li class="design">
                             <span>2</span>
-                            <a>Проектирование</a>
+                            <span class="a">Проектирование</span>
                         </li>
                         <li class="points">
                             <img src="images/3-points.png">
                         </li>
                         <li class="delivery">
                             <span>3</span>
-                            <a>Доставка</a>
+                            <span class="a">Доставка</span>
                         </li>
                         <li class="points">
                             <img src="images/3-points.png">
                         </li>
                         <li class="assembly">
                             <span>4</span>
-                            <a>Монтаж оборудования</a>
+                            <span class="a">Монтаж оборудования</span>
                         </li>
                         <li class="points">
                             <img src="images/3-points.png">
                         </li>
                         <li class="escort">
                             <span>5</span>
-                            <a>Сопровождение</a>
+                            <span class="a">Сопровождение</span>
                         </li>
                     </ul>
                 </div>

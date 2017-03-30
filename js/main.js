@@ -29,7 +29,14 @@ $(document).ready(function() {
     });
 
     $(".btn-back-call, .btn-contacts, .btn-connect").on("click", function() {
-        $(".overlay, .modal").show().animate({"opacity": 1}, 600);
+        $(".overlay, .modal-back-call").show().animate({"opacity": 1}, 600);
+    });
+
+    $("#what-new .elem").on("click", function() {
+        // $(".modal-news .title").html($(this).find(".info .title").text());
+        $(".modal-news .date").html($(this).find(".info .date").text());
+        // $(".modal-news .text").html($(this).find(".info .text").text());
+        $(".overlay, .modal-news").show().animate({"opacity": 1}, 600);
     });
 
     $(".close, .overlay").on("click", function() {

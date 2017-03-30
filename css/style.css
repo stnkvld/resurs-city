@@ -308,7 +308,7 @@ section .container > .title {
 #offers .elem.retail-store-equipment {
     background-color: #52687f;
     background-image: url("../images/retail-store-equipment.png");
-    background-size: auto;
+    background-size: contain;
 }
 
 #offers .elem.services {
@@ -338,7 +338,7 @@ section .container > .title {
 }
 
 #offers .elem .title:hover {
-    color: #fcb623;
+    color: #ea2839;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
@@ -472,12 +472,20 @@ section .container > .title {
     transition: color 0.3s ease;
 }
 
+#what-new .elem:first-child .title {
+    color: #ea2839;
+}
+
 #what-new .elem:hover .info .title {
     color: #ea2839;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
+}
+
+#what-new .elem:first-child:hover .title {
+    color: #3b3f4d;
 }
 
 #what-new .elem .info .date {
@@ -936,7 +944,8 @@ section .container > .title {
     cursor: pointer;
 }
 
-.modal {
+.modal-back-call,
+.modal-news {
     display: none;
     opacity: 0;
     position: fixed;
@@ -948,18 +957,18 @@ section .container > .title {
     background-color: white;
 }
 
-.modal .title {
+.modal-back-call .title {
     font-size: 2.5vw;
     padding-left: 1.8vw;
     line-height: 2.4vw;
     margin-bottom: 1vw;
 }
 
-.modal .title span {
+.modal-back-call .title span {
     color: #ea2839;
 }
 
-.modal .btn-send {
+.modal-back-call .btn-send {
     font-size: 1.3vw;
     padding: 0.6vw 1.2vw;
     background-color: #ea2839;
@@ -971,11 +980,11 @@ section .container > .title {
     cursor: pointer;
 }
 
-.modal form {
+.modal-back-call form {
     padding-left: 1.8vw;
 }
 
-.modal .form-group {
+.modal-back-call .form-group {
     width: 78%;
     display: flex;
     flex-direction: row;
@@ -985,7 +994,7 @@ section .container > .title {
     margin-bottom: 1vw;
 }
 
-.modal .form-group .icon {
+.modal-back-call .form-group .icon {
     width: 1.5vw;
     height: 1.5vw;
     padding: 0.15vw;
@@ -994,19 +1003,19 @@ section .container > .title {
     border-right: 1px solid rgb(191, 191, 191);
 }
 
-.modal .form-group.name .icon {
+.modal-back-call .form-group.name .icon {
     background-image: url("../images/person-icon.png");
 }
 
-.modal .form-group.phone .icon {
+.modal-back-call .form-group.phone .icon {
     background-image: url("../images/phone-icon.png");
 }
 
-.modal .form-group.email .icon {
+.modal-back-call .form-group.email .icon {
     background-image: url("../images/mail-icon.png");
 }
 
-.modal .form-group input {
+.modal-back-call .form-group input {
     font-family: "SomeFont2", "SomeFont", sans-serif;
     padding: 0.15vw 0 0.15vw 0.8vw;
     font-size: 1.3vw;
@@ -1039,6 +1048,47 @@ section .container > .title {
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+.modal-news {
+    width: 62%;
+    top: calc(50% - 16vw);
+    left: 19%;
+    height: 32vw;
+    text-align: center;
+}
+
+.modal-news .title {
+    max-width: 80%;
+    font-size: 2.65vw;
+    margin: 2vw auto 1vw auto;
+    color: #ea2839;
+}
+
+.modal-news .date {
+    font-size: 1vw;
+    border-bottom: 1px solid rgb(157, 159, 166);
+    padding-bottom: 1.3vw;
+    color: #707480;
+}
+
+.modal-news .text {
+    padding: 0 2vw;
+    max-height: 20vw;
+    overflow: scroll;
+}
+
+.modal-news .text p {
+    font-family: "SomeFont2", "SomeFont", sans-serif;
+    font-size: 1.3vw;
+    line-height: 1.72vw;
+    text-align: left;
+    margin-bottom: 1.45vw;
+}
+
+.modal-news .close {
+    width: 2.4vw;
+    height: 2.4vw;
 }
 
 #main-title.section {
@@ -1169,10 +1219,6 @@ section .container > .title {
     font-family: "SomeFont2", "SomeFont", sans-serif;
 }
 
-#contacts > ymaps {
-    height: 43.5vw !important;
-}
-
 #contacts .info .socials {
     margin-top: 5.3vw;
     padding-left: 3.75vw;
@@ -1203,6 +1249,17 @@ section .container > .title {
     color: black;
     text-decoration: none;
     font-size: 1.35vw;
+}
+
+#contacts #map {
+    display: none;
+    height: 55vw;
+}
+
+#contacts .info {
+    width: 100%;
+    position: static;
+    text-align: center;
 }
 
 #offers.product-offers {
@@ -1405,10 +1462,14 @@ section .container > .title {
     margin-right: 3.4vw;
     font-size: 1.7vw;
     padding: 1vw 1.2vw;
+    cursor: pointer;
+    outline: none;
+    border-radius: 1px;
 }
 
 #specifications .download-catalog {
     display: inline-block;
+    cursor: pointer;
 }
 
 #specifications .download-catalog a {
@@ -1535,4 +1596,425 @@ section .container > .title {
 #ransom .with-image-3 .list-2 li span {
     font-family: "SomeFont2", "SomeFont", sans-serif;
     color: black;
+}
+
+@media all and (max-width: 640px) {
+    #header .container,
+    #footer .container,
+    #header .wrapper,
+    #header .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #header .logo {
+        width: 22vw;
+        margin-bottom: 3vw;
+        margin-top: 2vw;
+    }
+
+    #header .menu {
+        margin-bottom: 3vw;
+    }
+
+    #header .menu ul li {
+        margin-bottom: 2vw;
+    }
+
+    #header .menu ul li a {
+        font-size: 3.2vw;
+    }
+
+    #header .phones {
+        margin-bottom: 2vw;
+    }
+
+    #header .phones a {
+        font-size: 3.8vw;
+    }
+
+    .btn {
+        font-size: 3vw;
+        padding: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    #slider-main .swiper-slide .text .title {
+        font-size: 5.4vw;
+    }
+
+    #slider-main .swiper-slide {
+        max-height: 50vw;
+    }
+
+    #slider-main .down {
+        width: 7vw;
+        left: calc(50% - 3.5vw)
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        display: none;
+    }
+
+    #about-us p {
+        padding: 0 1.2vw;
+        font-size: 2.82vw;
+        line-height: 3.2vw;
+    }
+
+    #offers .elem-wrapper {
+        flex-direction: column;
+    }
+
+    #offers .elem {
+        width: 100%;
+        height: 100vw;
+    }
+
+    #offers .elem .title {
+        font-size: 6.5vw;
+    }
+
+    #offers .elem .wrapper {
+        max-height: 14vw;
+        padding-left: 6vw;
+    }
+
+    #offers .elem .text {
+        font-size: 4vw;
+    }
+
+    .btn-more, .btn-send, .btn-contacts, .btn-connect, .btn-load-more, .btn-prices {
+        font-size: 4.3vw;
+        padding: 1.2vw 2.5vw;
+    }
+
+    #offers .elem:hover .wrapper {
+        max-height: 50vw;
+    }
+
+    .elem.empty {
+        display: none;
+    }
+
+    section .container > .title {
+        font-size: 9vw;
+    }
+
+    #what-new .elem {
+        max-height: 55vw;
+        overflow: hidden;
+    }
+
+    #what-new .elem .photo {
+        width: 100%;
+        height: 35.5vw;
+    }
+
+    #what-new .elem .info {
+        width: calc(100% - 2vw);
+        height: 20.5vw
+    }
+
+    #what-new .elem .info .title {
+        font-size: 4.5vw;
+    }
+
+    #what-new .elem .info .date {
+        font-size: 2vw;
+    }
+
+    #what-new .elem .info .text {
+        font-size: 2.32vw;
+        line-height: 2.5vw;
+    }
+
+    #how-buy .elements {
+        flex-direction: column;
+    }
+
+    #how-buy .elements .elem {
+        width: calc(100% - 6vw) !important;
+        height: 34vw;
+        padding: 1.5vw 3vw !important;
+    }
+
+    #how-buy .elements .elem .title {
+        font-size: 6.5vw;
+    }
+
+    #how-buy .elements .elem p {
+        font-size: 3vw;
+    }
+
+    #how-buy .elements .elem .form-group {
+        margin-bottom: 3vw;
+    }
+
+    #how-buy .elements .elem .form-group label,
+    #how-buy .elements .elem .form-group input {
+        font-size: 3vw;
+        max-width: none;
+    }
+
+    #work-process .container > p {
+        font-size: 2.8vw;
+        line-height: 3vw;
+    }
+
+    #work-process .wrapper {
+        width: 100%;
+    }
+
+    #work-process .wrapper .right p,
+    #work-process .wrapper .right li {
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+
+    #work-process .wrapper .left li.points {
+        margin-left: 1.6vw;
+    }
+
+    #work-process .wrapper .left li:not(.points) {
+        height: 4.5vw;
+    }
+
+    #work-process .wrapper .left li:not(.points) span:not(.a) {
+        width: 4vw;
+        height: 4vw;
+        line-height: 4vw;
+        font-size: 2.2vw;
+    }
+
+    #work-process .wrapper .left li:not(.points) .a {
+        font-size: 2.4vw;
+        line-height: 2.5vw;
+        vertical-align: middle;
+    }
+
+    #work-process .wrapper .left {
+        width: 45%;
+    }
+
+    #advantages .advantages-1,
+    #advantages .advantages-2,
+    #how-choose .options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #advantages .advantages-1 .elem {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+
+    #advantages .advantages-1 p {
+        font-size: 4vw;
+        line-height: 4.5vw;
+    }
+
+    #advantages .container > .title {
+        margin-bottom: 4vw;
+    }
+
+    #advantages .advantages-1 .check {
+        height: 3.4vw;
+    }
+
+    #advantages .advantages-2 .elem {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+
+    #advantages .advantages-2 .elem .icon {
+        height: 28vw;
+    }
+
+    #advantages .advantages-2 .elem .title {
+        font-size: 4vw;
+    }
+
+    #advantages .advantages-2 .elem .text {
+        font-size: 3.5vw;
+        line-height: 4vw;
+    }
+
+    #how-choose .container > .title {
+        font-size: 4.65vw;
+    }
+
+    #how-choose .options .elem {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+
+    #how-choose .options .elem .title {
+        font-size: 3.5vw;
+    }
+
+    #how-choose .options .elem .text {
+        font-size: 3vw;
+    }
+
+    #specifications > .right > .title {
+        font-size: 4vw;
+    }
+
+    #specifications > .right .positions li .title {
+        font-size: 1.6vw;
+    }
+
+    #specifications > .right .positions li .value {
+        font-size: 1.6vw;
+    }
+
+    #specifications .btn-prices {
+        font-size: 2.7vw;
+    }
+
+    #specifications .download-catalog .icon {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    #specifications .download-catalog a {
+        font-size: 2.3vw;
+    }
+
+    #ransom .text {
+        font-size: 2.5vw;
+        line-height: 3.5vw;
+    }
+
+    #ransom .with-image .text {
+        font-size: 2.3vw;
+    }
+
+    #ransom .with-image-3 .list li {
+        font-size: 3.8vw;
+    }
+
+    #ransom .container > .title {
+        font-size: 3.65vw;
+    }
+
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services .elem {
+        width: 100%;
+    }
+
+    #services .elem .icon {
+        height: 28vw;
+    }
+
+    #services .elem .title {
+        font-size: 3.5vw;
+    }
+
+    #services .elem .text {
+        font-size: 2.8vw;
+    }
+
+    #footer .logo {
+        width: 22vw;
+        margin-bottom: 5.5vw;
+        margin-top: 2vw;
+    }
+
+    #footer div, #footer p {
+        font-size: 2.1vw;
+    }
+
+    #footer .copyright {
+        margin-bottom: 2.5vw;
+    }
+
+    #footer .design-by {
+        width: 40vw;
+        margin-bottom: 2.5vw;
+    }
+
+    #footer .design-by p {
+        font-size: 2.25vw;
+        line-height: 2.25vw;
+    }
+
+    #contacts .info .title {
+        font-size: 5vw;
+    }
+
+    #contacts .info .invoices {
+        font-size: 4vw;
+        line-height: 4.3vw;
+    }
+
+    #contacts .info .contacts li,
+    #contacts .info .socials li {
+        display: block;
+    }
+
+    #contacts .info .contacts li .icon {
+        width: 6.5vw;
+        margin: 0;
+    }
+
+    #contacts .info .contacts li .text {
+        font-size: 4vw;
+        line-height: 4.2vw;
+    }
+
+    #contacts .info .socials {
+        margin-top: 3vw;
+    }
+
+    #contacts .info .socials li a {
+        font-size: 4vw;
+    }
+
+    #contacts .info .socials li .icon {
+        width: 6.5vw;
+        height: 6.5vw;
+        line-height: 6.5vw;
+        margin: 0 auto;
+    }
+
+    #contacts .info .socials li .icon img {
+        vertical-align: middle;
+    }
+
+    .modal-back-call, .modal-news {
+        width: 60%;
+        height: 45vw;
+        top: calc(50% - 22.5vw);
+        left: 20%;
+    }
+
+    .modal-back-call .title {
+        font-size: 4.5vw;
+        line-height: 4.7vw;
+    }
+
+    .modal-back-call .form-group input {
+        font-size: 3vw;
+    }
+
+    .modal-back-call .form-group .icon {
+        width: 2.2vw;
+        height: 2.2vw;
+        padding: 1.8vw;
+    }
+
+    .modal-back-call .btn-send {
+        font-size: 4vw;
+    }
+
+    .modal .close {
+        width: 4vw;
+        height: 4vw;
+    }
 }

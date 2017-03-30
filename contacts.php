@@ -1,7 +1,7 @@
 <?php require_once("header.php"); ?>
 
     <section id="contacts" class="contacts">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A45f8484dbbdebeea8d0d68d2e2ae1dfeab61994c7bd84313e02326c55861ec90&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+        <div id="map" class="map"></div>
         <div class="info">
             <h3 class="title">ООО "Ресурс сити"</h3>
             <p class="invoices">
@@ -106,5 +106,7 @@
             </button>
         </div>
     </section>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/map.js"></script>
 
 <?php require_once("footer.php"); ?>

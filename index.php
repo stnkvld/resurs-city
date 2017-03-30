@@ -128,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <div class="elem"></div>
+            <div class="elem empty"></div>
         </div>
     </section>
     <section id="what-new" class="what-new">
