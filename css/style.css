@@ -2017,4 +2017,28 @@ section .container > .title {
         width: 4vw;
         height: 4vw;
     }
+
+    .modal-news {
+        width: 80%;
+        left: 10%;
+        height: 55vw;
+        top: calc(50% - 22.5vw);
+    }
+
+    .modal-news .title {
+        font-size: 3.65vw;
+    }
+
+    .modal-news .date {
+        font-size: 2.2vw;
+    }
+
+    .modal-news .text {
+        max-height: 30vw;
+    }
+
+    .modal-news .text p {
+        font-size: 2.2vw;
+        line-height: 2.5vw;
+    }
 }
