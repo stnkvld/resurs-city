@@ -1252,14 +1252,7 @@ section .container > .title {
 }
 
 #contacts #map {
-    display: none;
-    height: 55vw;
-}
-
-#contacts .info {
-    width: 100%;
-    position: static;
-    text-align: center;
+    height: 42.5vw;
 }
 
 #offers.product-offers {
@@ -1944,6 +1937,10 @@ section .container > .title {
         line-height: 2.25vw;
     }
 
+    #contacts .info {
+        position: static;
+    }
+
     #contacts .info .title {
         font-size: 5vw;
     }
@@ -1985,6 +1982,16 @@ section .container > .title {
 
     #contacts .info .socials li .icon img {
         vertical-align: middle;
+    }
+
+    #contacts #map {
+        height: 55vw;
+    }
+
+    #contacts .info {
+        width: 100%;
+        position: static;
+        text-align: center;
     }
 
     .modal-back-call, .modal-news {
